@@ -15,19 +15,26 @@
     <div class="form-container">
       <ion-item>
         <ion-label position="floating">Name</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]= "model.user_name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]= "model.user_email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]= "model.user_password"></ion-input>
         <ion-icon name="eye" slot="end"></ion-icon>
       </ion-item>
-
-      <ion-button expand="block" class="main-button">Sign Up</ion-button>
+      <ion-item>
+        <ion-label position="floating">Mobile Number</ion-label>
+        <ion-input type="number" [(ngModel)]= "model.user_mobile"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input [(ngModel)]= "model.user_address"></ion-input>
+      </ion-item>
+      <ion-button expand="block" class="main-button" (click)= "saver()">Sign Up</ion-button>
 
       <div class="sign-up">
         Already have an account? <ion-button color="dark" fill="clear" routerLink="/login" routerDirection="forward">Sign in</ion-button>
